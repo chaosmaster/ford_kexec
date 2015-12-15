@@ -10,9 +10,9 @@ EXTRA_CFLAGS += -D__KERNEL__ -DKERNEL -DCONFIG_KEXEC -march=armv7-a -mtune=corte
 # EXTRA_CFLAGS += -O0
 
 ARCH		= arm
-KERNEL = /mnt/mnt/kernel-build
+KERNEL ?= /mnt/mnt/kernel-build
 CONFIG = ford_cyanogenmod_defconfig
-CROSS_COMPILE = /mnt/mnt/cyanogen/prebuilts/gcc/linux-x86/arm/arm-eabi-4.8/bin/arm-eabi-
+CROSS_COMPILE ?= /mnt/mnt/cyanogen/prebuilts/gcc/linux-x86/arm/arm-eabi-4.8/bin/arm-eabi-
 
 CPPFLAGS	=  -I$(KERNEL)/
 
